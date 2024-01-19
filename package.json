@@ -1,7 +1,7 @@
 {
     "name": "com.mechanicum.package",
     "displayName": "Package",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "unity": "2022.3",
     "description": "Test package",
     "keywords": [
