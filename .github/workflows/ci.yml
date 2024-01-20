@@ -15,8 +15,6 @@ jobs:
      # Test
     - name: Run tests
       uses: game-ci/unity-test-runner@v2
-      with:
-        projectPath: Assets/com.mechanicum.Package/Tests
         
     - name: split upm branch
       run: |
