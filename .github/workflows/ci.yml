@@ -11,13 +11,12 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    
-    - name:  'Automated Version Bump'
-      uses:  'phips28/gh-action-bump-version@master'
-      env:
-        GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+
+     # Test
+    - name: Run tests
+      uses: game-ci/unity-test-runner@v2
       with:
-        commit-message: 'ci: bumps version to {{version}} [skip ci]'
+        projectPath: Assets/com.mechanicum.Package/Tests
         
     - name: split upm branch
       run: |
