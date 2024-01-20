@@ -13,8 +13,14 @@ jobs:
         fetch-depth: 0
 
      # Test
-    - name: Run tests
+    - name: Run Unit Tests
       uses: game-ci/unity-test-runner@v2
+      env:
+        UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+        UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+      with:
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
         
     - name: split upm branch
       run: |
